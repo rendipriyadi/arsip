@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArsipController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/arsip', function () {
-    return "Test";
-});
+Route::resource('arsip', ArsipController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
