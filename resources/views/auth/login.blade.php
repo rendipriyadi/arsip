@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Aplikasi Arsip CMNP</title>
+  <title>APLIKASI SIARSIP</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ asset('') }}assets/vendors/feather/feather.css">
   <link rel="stylesheet" href="{{ asset('') }}assets/vendors/mdi/css/materialdesignicons.min.css">
@@ -30,7 +30,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="{{ asset('') }}assets/images/logo.svg" alt="logo">
+                <img src="{{ asset('') }}assets/images/cmnplogo.png" alt="logo">
               </div>
               <h4>APLIKASI SIARSIP</h4>
               <h6 class="fw-light">Silahkan Masukkan Email dan Password Anda</h6>
