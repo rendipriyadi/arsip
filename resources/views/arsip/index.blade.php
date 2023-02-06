@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         Data Arsip
-                        <a href="{{ route('arsip.create') }}" class="btn btn-sm btn-primary" style="float: right">
+                        <a href="{{ route('arsip.create') }}" class="btn btn-sm btn-outline-primary" style="float: right">
                             Tambah Data
                         </a>
                     </div>
@@ -36,11 +36,11 @@
                                                     @csrf
                                                     @method('delete')
                                                     <a href="{{ route('arsip.edit', $data->id) }}"
-                                                        class="btn btn-sm btn-outline-success">
+                                                        class="btn btn-sm btn-outline-warning">
                                                         Edit
                                                     </a> |
                                                     <a href="{{ route('arsip.show', $data->id) }}"
-                                                        class="btn btn-sm btn-outline-warning">
+                                                        class="btn btn-sm btn-outline-info">
                                                         Show
                                                     </a> |
                                                     <button type="submit" class="btn btn-sm btn-outline-danger"
