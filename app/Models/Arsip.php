@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Arsip extends Model
 {
     use HasFactory;
-
+    //tambahkan ini untuk tabel dalam bahasa single
+    protected $table = 'arsip';
     protected $fillable = [
         'arsipid',
         'no_arsip',
