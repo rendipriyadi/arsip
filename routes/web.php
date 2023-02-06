@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArsipController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,13 +19,15 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-// Route::resource('arsip', ArsipController::class)
-//     ->only(['index', 'store'])
-//     ->middleware(['auth', 'verified']);
-
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('arsip', 'ArsipController@index')->name('arsip.index');
+Route::resource('arsip', ArsipController::class);
+// Route::get('/arsip', function () {
+//     return view('arsip.index');
+// })->middleware(['auth', 'verified'])->name('arsip.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

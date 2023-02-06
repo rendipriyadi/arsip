@@ -33,4 +33,5 @@ class Arsip extends Model
         'proyek',
         'indeks',
     ];
+    public $timestamps = true;
 }
