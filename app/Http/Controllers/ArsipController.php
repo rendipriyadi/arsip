@@ -31,7 +31,7 @@ class ArsipController extends Controller
      */
     public function create()
     {
-        //
+        return view('arsip.create');
     }
 
     /**
