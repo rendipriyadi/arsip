@@ -8,10 +8,10 @@
       </div>
       <div>
         <a class="navbar-brand brand-logo" href="{{ asset('') }}assets/index.html">
-          <img src="{{ asset('') }}assets/images/logo.svg" alt="logo" />
+          <img src="{{ asset('') }}assets/images/cmnplogo.png" alt="logo" />
         </a>
         <a class="navbar-brand brand-logo-mini" href="{{ asset('') }}assets/index.html">
-          <img src="{{ asset('') }}assets/images/logo-mini.svg" alt="logo" />
+          <img src="{{ asset('') }}assets/images/cmnplogo.png" alt="logo" />
         </a>
       </div>
     </div>
@@ -32,12 +32,12 @@
               <p class="mb-1 mt-3 font-weight-semibold">{{ auth()->user()->name }}</p>
               <p class="fw-light text-muted mb-0">{{ auth()->user()->email }}</p>
             </div>
-            <a href="{{route('profile.edit')}}" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile</a>
+            {{-- <a href="{{route('profile.edit')}}" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile</a>
             
             <a href="{{ route('logout') }}" style="cursor: pointer" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-                </form>
+                </form> --}}
           </div>
         </li>
       </ul>

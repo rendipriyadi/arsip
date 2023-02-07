@@ -15,6 +15,15 @@
         </a>
       </li>
       
+      <li class="nav-item">
+        <a class="nav-link"href="{{ route('logout') }}" style="cursor: pointer" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+          <i class="mdi mdi mdi-logout menu-icon"></i>
+          <span class="menu-title">Sign Out</span>
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            </form>
+      </li>
     </ul>
   </nav>
   <!-- partial -->
