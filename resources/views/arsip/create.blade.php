@@ -108,7 +108,7 @@
                                   <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">URAIAN</label>
                                     <div class="col-sm-9">
-                                      <input type="text" class="form-control" />
+                                        <textarea class="form-control" style="height: 100px"></textarea>
                                     </div>
                                   </div>
                                 </div>
