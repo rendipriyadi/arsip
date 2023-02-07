@@ -279,8 +279,10 @@
                                   </div>
                                 </div>
                               </div>
-                              <button type="reset" class="btn btn-secondary mb-2">Reset</button>
-                              <button type="submit" class="btn btn-outline-success mb-2">Submit</button>
+                              <div style="float: right">
+                                <button type="submit" class="btn btn-sm btn-outline-success">Submit</button>
+                                <button type="reset" class="btn btn-sm btn-outline-secondary">Reset</button>
+                              </div>
                             </form>
                           </div>
                         </div>
