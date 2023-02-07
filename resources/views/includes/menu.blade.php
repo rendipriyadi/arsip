@@ -7,7 +7,7 @@
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
-     
+    
       <li class="nav-item">
         <a class="nav-link" href="{{ route('arsip.index') }}">
           <i class="mdi mdi-card-text-outline menu-icon"></i>
