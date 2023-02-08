@@ -11,6 +11,7 @@ use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
+use Illuminate\Support\Facades\Gate;
 
 class ArsipDataTable extends DataTable
 {
@@ -23,7 +24,18 @@ class ArsipDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'arsip.action')
+            // ->addColumn('action', 'arsip.action')
+            ->addColumn('action', function ($row) {
+                $action = '';
+                // if (Gate::allows('update role')) {
+                $action = '<button type="button" data-id=' . $row->id . ' data-jenis="edit" class="btn btn-warning btn-sm action"><i class="ti-pencil"></i></button>';
+                // }
+                // if (Gate::allows('delete role')) {
+                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="show" class="btn btn-info btn-sm action"><i class="ti-eye"></i></button>';
+                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="delete" class="btn btn-danger btn-sm action"><i class="ti-trash"></i></button>';
+                // }
+                return $action;
+            })
             ->addindexcolumn()
             ->setRowId('id');
     }

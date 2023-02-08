@@ -18,3 +18,4 @@
 <script src="{{ asset('') }}assets/js/jquery.cookie.js" type="text/javascript"></script>
 <script src="{{ asset('') }}assets/js/dashboard.js"></script>
 <script src="{{ asset('') }}assets/js/Chart.roundedBarCharts.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>

@@ -11,10 +11,11 @@
 <link rel="stylesheet" href="{{ asset('') }}assets/vendors/css/vendor.bundle.base.css">
 <!-- endinject -->
 <!-- Plugin css for this page -->
-<link rel="stylesheet" href="{{ asset('') }}assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+{{-- <link rel="stylesheet" href="{{ asset('') }}assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css"> --}}
 <link rel="stylesheet" href="{{ asset('') }}assets/js/select.dataTables.min.css">
 <!-- End plugin css for this page -->
 <!-- inject:css -->
 <link rel="stylesheet" href="{{ asset('') }}assets/css/vertical-layout-light/style.css">
 <!-- endinject -->
 <link rel="shortcut icon" href="{{ asset('') }}assets/images/cmnplogo.png" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
