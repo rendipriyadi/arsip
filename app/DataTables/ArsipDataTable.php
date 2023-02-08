@@ -27,9 +27,9 @@ class ArsipDataTable extends DataTable
             // ->addColumn('action', 'arsip.action')
             ->addColumn('action', function ($row) {
                 $action = '';
-                $action = '<button type="button" data-id=' . $row->id . ' data-jenis="edit" class="btn btn-sm btn-outline-warning action"><i class="ti-pencil"></i>Edit </button>';
-                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="show" class="btn btn-sm btn-outline-info action"><i class="ti-eye"></i>Show </button>';
-                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="delete" class="btn btn-sm btn-outline-danger action"><i class="ti-trash"></i>Delete </button>';
+                $action = '<button type="button" data-id=' . $row->id . ' data-jenis="edit" class="btn btn-sm btn-outline-warning action"><i class="ti-pencil"></i></button>';
+                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="show" class="btn btn-sm btn-outline-info action"><i class="ti-eye"></i></button>';
+                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="delete" class="btn btn-sm btn-outline-danger action"><i class="ti-trash"></i></button>';
                 return $action;
             })
             ->addindexcolumn()
