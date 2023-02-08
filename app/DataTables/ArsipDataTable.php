@@ -27,13 +27,9 @@ class ArsipDataTable extends DataTable
             // ->addColumn('action', 'arsip.action')
             ->addColumn('action', function ($row) {
                 $action = '';
-                // if (Gate::allows('update role')) {
-                $action = '<button type="button" data-id=' . $row->id . ' data-jenis="edit" class="btn btn-warning btn-sm action"><i class="ti-pencil"></i></button>';
-                // }
-                // if (Gate::allows('delete role')) {
-                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="show" class="btn btn-info btn-sm action"><i class="ti-eye"></i></button>';
-                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="delete" class="btn btn-danger btn-sm action"><i class="ti-trash"></i></button>';
-                // }
+                $action = '<button type="button" data-id=' . $row->id . ' data-jenis="edit" class="btn btn-sm btn-outline-warning action"><i class="ti-pencil"></i>Edit </button>';
+                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="show" class="btn btn-sm btn-outline-info action"><i class="ti-eye"></i>Show </button>';
+                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="delete" class="btn btn-sm btn-outline-danger action"><i class="ti-trash"></i>Delete </button>';
                 return $action;
             })
             ->addindexcolumn()
