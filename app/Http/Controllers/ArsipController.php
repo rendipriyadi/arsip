@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Arsip;
 use Illuminate\Http\Request;
+use App\DataTables\ArsipDataTable;
 
 class ArsipController extends Controller
 {
@@ -18,10 +19,11 @@ class ArsipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ArsipDataTable $dataTable)
     {
-        $arsip = Arsip::all();
-        return view('arsip.index', compact('arsip'));
+        return $dataTable->render('arsip.index');
+        // $arsip = Arsip::all();
+        // return view('arsip.index', compact('arsip'));
     }
 
     /**

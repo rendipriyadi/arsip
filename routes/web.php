@@ -25,6 +25,7 @@ Route::get('/dashboard', function () {
 
 // Route::get('arsip', 'ArsipController@index')->name('arsip.index');
 Route::resource('arsip', ArsipController::class);
+// Route::get('/arsip', [ArsipController::class, 'index'])->name('arsip.index');
 // Route::get('/arsip', function () {
 //     return view('arsip.index');
 // })->middleware(['auth', 'verified'])->name('arsip.index');
