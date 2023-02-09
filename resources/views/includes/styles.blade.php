@@ -19,3 +19,4 @@
 <!-- endinject -->
 <link rel="shortcut icon" href="{{ asset('') }}assets/images/cmnplogo.png" />
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
