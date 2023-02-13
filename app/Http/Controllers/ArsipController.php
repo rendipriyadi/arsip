@@ -4,9 +4,11 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Arsip;
 use Illuminate\Http\Request;
 use App\DataTables\ArsipDataTable;
+use App\Http\Requests\StoreArsipRequest;
+use App\Models\Arsip;
+
 
 class ArsipController extends Controller
 {
@@ -42,9 +44,12 @@ class ArsipController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreArsipRequest $request)
     {
-        //
+        $data = $request->all();
+        $arsip = Arsip::create($data);
+
+        return redirect()->route('arsip.index')->with('success', 'Arsip berhasil ditambahkan');
     }
 
     /**
