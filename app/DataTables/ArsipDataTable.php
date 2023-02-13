@@ -44,7 +44,8 @@ class ArsipDataTable extends DataTable
      */
     public function query(Arsip $model): QueryBuilder
     {
-        return $model->newQuery();
+        // return $model->newQuery();
+        return $model->newQuery()->orderBy('id', 'desc');
     }
 
     /**
