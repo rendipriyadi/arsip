@@ -19,16 +19,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('pages.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [ArsipController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('arsip', 'ArsipController@index')->name('arsip.index');
 Route::resource('arsip', ArsipController::class);
-// Route::get('/arsip', [ArsipController::class, 'index'])->name('arsip.index');
-// Route::get('/arsip', function () {
-//     return view('arsip.index');
-// })->middleware(['auth', 'verified'])->name('arsip.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -37,3 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

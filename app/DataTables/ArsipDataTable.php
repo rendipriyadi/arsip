@@ -24,13 +24,10 @@ class ArsipDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            // ->addColumn('action', 'arsip.action')
-            ->addColumn('action', function ($row) {
-                $action = '';
-                $action = '<button type="button" data-id=' . $row->id . ' data-jenis="edit" class="btn btn-sm btn-outline-warning action"><i class="ti-pencil"></i></button>';
-                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="show" class="btn btn-sm btn-outline-info action"><i class="ti-eye"></i></button>';
-                $action .= ' <button type="button" data-id=' . $row->id . ' data-jenis="delete" class="btn btn-sm btn-outline-danger action"><i class="ti-trash"></i></button>';
-                return $action;
+            // button action show, edit, delete render di view
+            ->addColumn('action', function ($data) {
+                $route = 'arsip';
+                return view('arsip.action', compact('route', 'data'))->render();
             })
             ->addindexcolumn()
             ->setRowId('id');
@@ -44,7 +41,7 @@ class ArsipDataTable extends DataTable
      */
     public function query(Arsip $model): QueryBuilder
     {
-        // return $model->newQuery();
+        // tampilkan data berdasarkan id desc
         return $model->newQuery()->orderBy('id', 'desc');
     }
 
@@ -86,14 +83,11 @@ class ArsipDataTable extends DataTable
                 ->printable(false)
                 ->width(60)
                 ->addClass('text-center'),
-            // Column::make('id'),
             Column::make('no_arsip')->title('Nomor Arsip'),
             Column::make('bentuk_arsip')->title('Bentuk Arsip'),
             Column::make('m_k')->title('Masuk/Keluar'),
             Column::make('uraian')->title('Uraian'),
             Column::make('s_d')->title('Sampai Dengan'),
-            // Column::make('created_at'),
-            // Column::make('updated_at'),
         ];
     }
 

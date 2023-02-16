@@ -8,7 +8,7 @@
                     <div class="card-header">
                         Data Arsip
                         <a href="{{ route('arsip.create') }}" class="btn btn-sm btn-outline-primary" style="float: right">
-                            Tambah Data
+                            Add Data
                         </a>
                     </div>
 

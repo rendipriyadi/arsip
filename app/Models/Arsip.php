@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Arsip extends Model
 {
     use HasFactory;
+    //tambahkan untuk menggunakan soft delete
+    use SoftDeletes;
     //tambahkan ini untuk tabel dalam bahasa single
     protected $table = 'arsip';
     protected $fillable = [

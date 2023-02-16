@@ -8,7 +8,7 @@
         </a>
       </li>
     
-      <li class="nav-item">
+      <li class="nav-item {{ isActive(['arsip.create', 'arsip.edit', 'arsip.show']) }}">
         <a class="nav-link" href="{{ route('arsip.index') }}">
           <i class="mdi mdi-card-text-outline menu-icon"></i>
           <span class="menu-title">Arsip</span>
