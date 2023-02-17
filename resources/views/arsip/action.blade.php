@@ -7,3 +7,16 @@
         <button type="submit" class="btn btn-sm btn-outline-danger action"><i class="ti-trash"></i></button>
     </form>
 </div>
+
+//return confirm delete
+<form
+                                                                            action="{{ route('backsite.motherboard.destroy', encrypt($motherboard_item->id)) }}"
+                                                                            method="POST"
+                                                                            onsubmit="return confirm('Anda yakin ingin menghapus data ini ?');">
+                                                                            <input type="hidden" name="_method"
+                                                                                value="DELETE">
+                                                                            <input type="hidden" name="_token"
+                                                                                value="{{ csrf_token() }}">
+                                                                            <input type="submit" class="dropdown-item"
+                                                                                value="Delete">
+                                                                        </form>
